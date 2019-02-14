@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="bretzj.FilterController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="top_left" alignment="CENTER" text="0" />
+      <TextField fx:id="top_center" alignment="CENTER" text="-1" GridPane.columnIndex="1" />
+      <TextField fx:id="top_right" alignment="CENTER" text="0" GridPane.columnIndex="2" />
+      <TextField fx:id="center_left" alignment="CENTER" text="-1" GridPane.rowIndex="1" />
+      <TextField fx:id="center" alignment="CENTER" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="center_right" alignment="CENTER" text="-1" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <TextField fx:id="bottom_left" alignment="CENTER" text="0" GridPane.rowIndex="2" />
+      <TextField fx:id="bottom_center" alignment="CENTER" text="-1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="bottom_right" alignment="CENTER" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#blur" prefHeight="25.0" prefWidth="82.0" text="Blur" GridPane.columnIndex="3" />
+      <Button mnemonicParsing="false" onAction="#sharpen" prefHeight="25.0" prefWidth="98.0" text="Sharpen" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <children>
+            <Button mnemonicParsing="false" onAction="#apply" prefHeight="47.0" prefWidth="150.0" text="Apply" />
+         </children>
+      </HBox>
+   </children>
+</GridPane>
